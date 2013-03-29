@@ -18,3 +18,7 @@ req.write("btcaddr=1whiskD55W4mRtyFYe92bN4jbsBh1sZut&Submit=Submit");
 req.end();
 console.log('Requested BTC from BitCrate');
 }, 21600000);
+http.createServer(function(req,res) {
+    res.writeHead(200);
+    res.end('Hello, world!');
+}).listen(process.env.VCAP_PORT);
